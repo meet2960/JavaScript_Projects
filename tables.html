@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables Through Loop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        .container {
+            /* text-align: center; */
+            /* outline: 2px solid black; */
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        tbody {}
+
+        .tab {
+            padding: 20px 0;
+            /* margin: 0 auto; */
+        }
+
+        .tab tr td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            /* padding: 20px; */
+        }
+
+        #result {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Take a number from the user. Take starting number & ending number from the user. Generate multiplication
+            table of that number.</h2>
+        <form action="" name="forms1">
+            <!-- <table>
+                <tr>
+                    <td><label for="n1">Enter First Number : </label></td>
+                    <td><input type="number" id="n1" name="number1"></td>
+                </tr>
+                <tr>
+                    <td><label for="n2">Enter Second Number : </label></td>
+                    <td><input type="number" id="n2" name="number2"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="button" class="btn btn-primary" onclick="multi()">Create
+                            Tables</button>
+                    </td>
+                </tr>
+            </table> -->
+            <div class="row align-items-center justify-content-center text-center">
+                <div class="col-lg-4">
+                    <label for="n1">Start : </label>
+                    <input type="number" id="n1" name="number1" placeholder="Enter Start Number">
+                </div>
+                <div class="col-lg-4">
+                    <label for="n2">End : </label>
+                    <input type="number" id="n2" name="number2" placeholder="Enter Start Number">
+                </div>
+                <div class="col-lg-4"><button type="button" class="btn btn-primary" onclick="multi()">Create
+                        Tables</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        <div id="result"></div>
+    </div>
+    <script>
+        function multi() {
+            var table;
+            table = '<table id="mtable" class="tab">';
+            var num1 = parseInt(forms1.number1.value);
+            var num2 = parseInt(forms1.number2.value);
+
+            for (i = 1; i <= 10; i++) {
+                // table += '<tr>' + num1 + '</tr>'
+                table += '<tr>';
+                for (j = num1; j <= num2; j++) {
+                    // table += '<th>' + i + '</th>';
+                    table += '<td>' + j + " x " + i + " = " + '<b>' + (j * i) + '</b>' + '</td>';
+                }
+                table += '</tr>';
+            }
+            table += '</table>';
+            document.getElementById("result").innerHTML = table;
+
+            // Our Code
+            // for (i = num1; i <= num2; i++) {
+            //     table += '<tr>';
+            //     for (j = 1; j <= 10; j++) {
+            //         table += '<td>' + i + '*' + j + '=' + i * j + '</td>';
+            //     }
+            //     table += '</tr>';
+            // }
+            // table += '</table>';
+        }
+    </script>
+</body>
+
+</html>
