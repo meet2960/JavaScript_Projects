@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program - 13</title>
+    <!-- Take a number to print the square of a number if it is less than 10. -->
+</head>
+<body>
+    <div class="container">
+        <h1>Take a number to print the square of a number if it is less than 10.</h1>
+        <form action="" name="numberinput">
+            <label for="n1">Enter First Number : </label>
+            <input type="number" name="number1" id="n1">
+            <br>
+            <br>
+            <button type="button" onclick="checks()">Find Square</button>
+            <br>
+            <p id="answers">Answer will Appear Here</p>
+        </form>
+    </div>
+    <script>
+        let num1,ans;
+        function checks(){
+            num1 = parseInt(numberinput.number1.value);
+            if(num1 < 10){
+                ans = num1 * num1;
+                document.getElementById("answers").innerHTML = "Square of " + num1 + " is : " +ans;
+            }
+            else{
+                document.getElementById("answers").innerHTML = num1 + " : is greater than 10";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum, Average, Odd/Even</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        button{
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Java Script to Find Sum, Average and Odd/Even</h1>
+    <form action="" name="inputform">
+        <label for="num1">Enter First Number : </label>
+        <input type="number" name="first" id="num1">
+        <br>
+        <label for="num2">Enter Second Number : </label>
+        <input type="number" name="second" id="num2">
+        <br>
+        <label for="num3">Enter Third Number : </label>
+        <input type="number" name="third" id="num3">
+        <br>
+        <button id="btn" onclick="add()" type="button">Click to Sum</button>
+        <br>
+        <button id="btn" onclick="avgs()" type="button">Click to Find Average</button>
+        <br>
+        <button id="btn" onclick="check()" type="button">Click to Check Odd/Even</button>
+
+    </form>
+    <br>
+    <p id="addition">The sum of Number is : </p>
+    <p id="averages">The Average of Three Number is : </p>
+    <p id="checks">The Number is : </p>
+
+    <script>
+        var n1, n2, n3, sum, avg;
+
+        function add() {
+            n1 = parseInt(inputform.first.value);
+            n2 = parseInt(inputform.second.value);
+            n3 = parseInt(inputform.third.value);
+            sum = n1 + n2 + n3;
+            document.getElementById("addition").innerHTML = sum;
+        }
+
+        function avgs() {
+            avg = sum / 3;
+            document.getElementById("averages").innerHTML = avg;
+        }
+
+        function check() {
+            if (avg % 2 == 0) {
+                document.getElementById("checks").innerHTML = "Even";
+            }
+            else {
+                document.getElementById("checks").innerHTML = "Odd";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number + or -</title>
+    <!-- Take a number and check whether it is zero, positive or negative. -->
+    <style>
+        *{
+            /* text-align: center; */
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="" name="numform">
+            <h1>Check Whether Number is Positive or Negative</h1>
+            <label for="">Enter any Number : </label>
+            <input type="number" name="number" id="n1">
+            <br>
+            <br>
+            <button type="button" onclick="checknum()">Check Number</button>
+            <p id="answer">Answer will Appear Here</p>
+        </form>
+    </div>
+    
+    <script>
+        var num;
+        function checknum(){
+            num = parseInt(numform.number.value);
+            if(num < 0){
+                document.getElementById("answer").innerHTML = num + " : is Negative"
+            }
+            else if(num == 0){
+                document.getElementById("answer").innerHTML = num + " : is Zero"
+            }
+            else{
+                document.getElementById("answer").innerHTML = num + " : is Positive"
+            }
+        }
+    </script>
+</body>
+</html>

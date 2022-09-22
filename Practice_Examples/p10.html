@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Numbers</title>
+    <style>
+
+    </style>
+    <!-- Write a program to swap 2 numbers using third variable. -->
+</head>
+
+<body>
+    <div class="container">
+        <h1>Swap Two Numbers</h1>
+        <form action="" name="swapform">
+            <label for="n1">Enter First Number : </label>
+            <input type="number" name="first" id="n1">
+            <br>
+            <br>
+            <label for="n2">Enter Second Number : </label>
+            <input type="number" name="second" id="n2">
+            <br>
+            <br>
+            <button type="button" onclick="swapping()">Swap Number</button>
+            <p id="befores">Before Swapping</p>
+            <p id="afters">After Swapping</p>
+        </form>
+    </div>
+
+    <script>
+        let num1, num2, temp;
+        function swapping() {
+            num1 = parseInt(swapform.first.value);
+            num2 = parseInt(swapform.second.value);
+            document.getElementById("befores").innerHTML = "Values before : " + num1 + " , " + num2;
+            temp = num1;
+            num1 = num2;
+            num2 = temp;
+            document.getElementById("afters").innerHTML = "Values are : " + num1 + " , " + num2;
+            // document.getElementById("befores").innerHTML = "Values Before Swapping : " + num1 + " , " + num2 + "<br> After Swapping Values : " + num1 + " , " + num2;
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program - 16</title>
+    <!-- Take 3 numbers and find smallest number using logical operator. -->
+</head>
+
+<body>
+    <div class="container">
+        <h1>Take 3 numbers and find smallest number using logical operator.</h1>
+        <form action="" name="forms1">
+            <label for="n1">Enter First Number : </label>
+            <input type="number" name="number1" id="n1">
+            <br>
+            <br>
+            <label for="n2">Enter Second Number : </label>
+            <input type="number" name="number2" id="n2">
+            <br>
+            <br>
+            <label for="n3">Enter Third Number : </label>
+            <input type="number" name="number3" id="n3">
+            <br>
+            <br>
+            <button type="button" onclick="checks()">Find Greatest</button>
+            <br>
+            <p id="answers">Check</p>
+        </form>
+    </div>
+    <script>
+        let num1, num2;
+        function checks() {
+            num1 = parseInt(forms1.number1.value);
+            num2 = parseInt(forms1.number2.value);
+            num3 = parseInt(forms1.number3.value);
+            if (num1 < num2 && num1 < num3) {
+                document.getElementById("answers").innerHTML = num1 + " : num1 is Smallest"
+            }
+            else if (num2 < num3) {
+                document.getElementById("answers").innerHTML = num2 + " : num2 is Smallest"
+            }
+            else {
+                document.getElementById("answers").innerHTML = num3 + " : num3 is Smallest"
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program - 14</title>
+    <style>
+        button {
+            padding: 8px 10px;
+            background-color: #f2f6f7;
+            cursor: pointer;
+        }
+
+        button:hover {
+            padding: 8px 10px;
+            background-color: #b4b4b4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Take a number and check whether it is zero, positive or negative using nested IF…ELSE statement .</h1>
+        <form action="" name="forms1">
+            <label for="n1">Enter First Number : </label>
+            <input type="number" name="number1" id="n1">
+            <!-- <br>
+            <br>
+            <label for="n2">Enter Second Number : </label>
+            <input type="number" name="number2" id="n2"> -->
+            <br>
+            <br>
+            <button type="button" onclick="checks()">Answer Here</button>
+            <br>
+            <p id="answers">Check</p>
+        </form>
+    </div>
+    <script>
+        let num1, num2;
+        function checks() {
+            num1 = parseInt(forms1.number1.value);
+            // num2 = parseInt(forms1.number2.value);
+            if (num1 == 0) {
+                document.getElementById("answers").innerHTML = num1 + " : Number is Zero";
+            }
+            else {
+                if (num1 > 0) {
+                    document.getElementById("answers").innerHTML = num1 + " : Number is Positive";
+                }
+                else {
+                    document.getElementById("answers").innerHTML = num1 + " : Number is Negative";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

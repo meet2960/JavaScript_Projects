@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Example with ID</title>
+</head>
+<body>
+    <label for="n1">Enter First Number : </label>
+    <input type="number" name="num1" id="n1" onkeyup="gets()">
+    <br>
+    <br>
+    <label for="n2">Enter Second Number : </label>
+    <input type="number" name="num2" id="n2" onkeyup="gets()">
+    <br>
+    <br>
+    <button type="button" onclick="sum()">Click to find sum</button>
+    <button type="button" onclick="avgs()">Click to find average</button>
+    <br>
+    <p id="para"></p>
+    <p id="para1"></p>
+
+    <script>
+        var nm1,nm2,ans,avg;
+        
+        function gets(){
+            nm1 = parseInt(document.getElementById("n1").value);
+            nm2 = parseInt(document.getElementById("n2").value);
+            console.log("Num1 is : " + nm1);
+            console.log("Num2 is : " + nm2);
+        }
+        function sum(){
+            ans = nm1 + nm2;
+            document.getElementById("para").innerHTML = "Sum is : " + ans;
+        }
+        function avgs(){
+            avg = (nm1+nm2) / 2;
+            document.getElementById("para1").innerHTML = "Average is : " + avg;
+        }
+    </script>
+</body>
+</html>

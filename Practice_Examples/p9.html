@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Find Factorial</h1>
+        <form action="" name="factform">
+            <label for="">Enter Number : </label>
+            <input type="number" id="f1" name="fact1">
+            <br>
+            <br>
+            <button type="button" onclick="checks()">Find Factorial</button>
+            <br>
+            <br>
+            <p id="answer"></p>
+        </form>
+    </div>
+    <script>
+        // function gets(){
+        //     f = parseInt(document.getElementById("f1").value);
+        // }
+        var f;
+        function checks() {
+            var ans = 1;
+            f = parseInt(factform.fact1.value);
+            if (f == 0) {
+                document.getElementById("answer").innerHTML = "Number is zero";
+            }
+            else if (f > 0) {
+                for (let i = 1; i <= f; i++) {
+                    ans *= i;
+                    document.getElementById("answer").innerHTML = "Factorial of " + f + " is : " + ans;
+                }
+                // for (let i = f; i >= 1; i--) {
+                //     ans *= i;
+                //     document.getElementById("answer").innerHTML = "Factorial of " + f + " is : " + ans;
+                // }
+            }
+            else {
+                document.getElementById("answer").innerHTML = "Number is Negative";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Greatest</title>
+    <!-- Take 2 numbers and display greatest number. (Also check equal number condition) -->
+    <style>
+        .container{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Find Greatest from Two Numbers</h1>
+        <form action="" name="numform">
+            <label for="n1">Enter First Number : </label>
+            <input type="number" name="num1" id="first">
+            <br>
+            <br>
+            <label for="n2">Enter Second Number : </label>
+            <input type="number" name="num2" id="second">
+            <br>
+            <br>
+            <button type="button" onclick="checks()">Find Largest</button>
+            <br>
+            <br>
+            <p id="answer"></p>
+        </form>
+    </div>
+    <script>
+        var n1,n2;
+
+        function checks(){
+            num1 = parseInt(numform.num1.value);
+            num2 = parseInt(numform.num2.value);
+
+            if(num1 > num2){
+                document.getElementById("answer").innerHTML = num1 + " is Greater than " + num2;
+            }
+            else if(num1 == num2){
+                document.getElementById("answer").innerHTML = num1 + " is Equal to " + num2;
+                // document.getElementById("answer").innerHTML = "Both Numbers are Equal";
+            }
+            else{
+                document.getElementById("answer").innerHTML = num1 + " is Less than than " + num2;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Calculation</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            /* text-align: center; */
+        }
+
+        h1 {
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        h2 {
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #f2f6f7;
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .grid1 {
+            padding: 10px;
+            border-right: 1px solid black;
+        }
+
+        .grid1:last-child {
+            border-right: none;
+        }
+
+        .para,
+        .para1 {
+            border: 1px solid black;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <!-- 1.	Calculate area of a rectangle.
+    2.	Calculate area of a square
+    3.	Calculate area of a circle. -->
+</head>
+
+<body>
+    <h1>Calculate Area</h1>
+    <hr>
+    <div class="container">
+        <div class="grid1">
+            <form action="" name="rectform">
+                <h2>Area of Rectangle</h2>
+                <label for="l1">Enter Length : </label>
+                <input type="number" name="rlength" id="l1">
+                <br>
+                <br>
+                <label for="b1">Enter Breadth : </label>
+                <input type="number" name="rbreadth" id="b1">
+                <br>
+                <br>
+                <button type="button" onclick="rectanglearea()">Find Area of Rectangle</button>
+                <br>
+                <br>
+                <p id="area1">Area of Rectangle is : </p>
+            </form>
+        </div>
+        <div class="grid1">
+            <form action="" name="squareform">
+                <h2>Area of Square</h2>
+                <label for="l2">Enter Length : </label>
+                <input type="number" name="slength" id="l2">
+                <br>
+                <br>
+                <button type="button" onclick="squarearea()">Find Area of Square</button>
+                <br>
+                <br>
+                <p id="area2">Area of Square is : </p>
+            </form>
+        </div>
+        <div class="grid1">
+            <form action="" name="circleform">
+                <h2>Area of Circle</h2>
+                <label for="r1">Enter Radius : </label>
+                <input type="number" name="radius" id="r1">
+                <br>
+                <br>
+                <button type="button" onclick="circlearea()">Find Area of Rectangle</button>
+                <br>
+                <br>
+                <p id="area3">Area of Retange is :- </p>
+            </form>
+        </div>
+    </div>
+    <hr>
+    <!-- <script src="script.js"></script> -->
+    <script>
+        const pi = 3.14;
+        var l, b, ans1, s, ans2, r, ans3;
+
+        function rectanglearea() {
+            l = parseFloat(rectform.rlength.value);
+            b = parseFloat(rectform.rbreadth.value);
+            ans1 = l * b;
+            document.getElementById("area1").innerHTML = "Ans : " + ans1;
+        }
+        function squarearea() {
+            s = parseInt(squareform.slength.value);
+            ans2 = s * s;
+            document.getElementById("area2").innerHTML = "Ans : " + ans2;
+        }
+        function circlearea() {
+            r = parseFloat(circleform.radius.value);
+            ans3 = pi * r * r;
+            document.getElementById("area3").innerHTML = "Ans : " + ans3;
+        }
+    </script>
+</body>
+
+</html>

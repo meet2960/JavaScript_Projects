@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program - 17</title>
+    <!-- Write a program to swap 2 numbers without taking third variable. -->
+</head>
+<body>
+    <div class="container">
+        <h1>Write a program to swap 2 numbers without taking third variable.</h1>
+        <form action="" name="swapform">
+            <label for="n1">Enter First Number : </label>
+            <input type="number" name="first" id="n1">
+            <br>
+            <br>
+            <label for="n2">Enter Second Number : </label>
+            <input type="number" name="second" id="n2">
+            <br>
+            <br>
+            <button type="button" onclick="swapping()">Swap Number</button>
+            <p id="befores">Before Swapping</p>
+            <p id="afters">After Swapping</p>
+        </form>
+    </div>
+    <script>
+        // let num1,num2;
+        // function swapping(){
+        //     num1 = parseInt(swapform.first.value);
+        //     num2 = parseInt(swapform.second.value);
+        //     document.getElementById("befores").innerHTML = "Values before : " + num1 + " , " + num2;
+
+        //     num1 = num1 + num2;
+        //     num2 = num1 - num2;
+        //     num1 = num1 - num2;
+
+        //     document.getElementById("afters").innerHTML = "Values before : " + num1 + " , " + num2;
+
+            
+            
+        // }
+        let x = 10;
+        let y = 20;
+        console.log(x);
+        console.log(y);
+        x = x + y;
+
+        y = x - y;
+        x = x - y;
+        console.log("After")
+        console.log(x);
+        console.log(y);
+
+
+        // let a=10;
+        // let b=20;
+        // let c=30;
+        
+        // console.log("Value of A : " + a);
+        // console.log("Value of B : " + b);
+        // console.log("Value of C : " + c);
+
+        a = a + b + c;
+        console.log(a);
+        b = a + (b - c);
+
+        
+
+
+        </script>
+</body>
+</html>

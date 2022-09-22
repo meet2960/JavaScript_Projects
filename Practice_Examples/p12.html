@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program-12</title>
+    <!-- Take a number check if a number is less than 100 or not. If it is less than 
+        100 then check if it is odd or even. -->
+</head>
+
+<body>
+    <div class="container">
+        <h1>Take a number check if a number is less than 100 or not. If it is less than
+            100 then check if it is odd or even.</h1>
+        <form action="" name="findform">
+            <label for="">Enter First Number : </label>
+            <input type="number" id="n1" name="number1">
+            <br>
+            <br>
+            <button type="button" onclick="checks()">Check</button>
+            <br>
+            <p id="answers">Check Number</p>
+        </form>
+    </div>
+    <script>
+        let n;
+        function checks() {
+            n = parseInt(findform.number1.value);
+            if (n < 100) {
+                if (n % 2 == 0) {
+                    document.getElementById("answers").innerHTML = n + " : is Even";
+                }
+                else {
+                    document.getElementById("answers").innerHTML = n + "is Odd";
+                }
+            }
+            else {
+                document.getElementById("answers").innerHTML = n + " : is greater than 100";
+            }
+        }
+    </script>
+</body>
+
+</html>

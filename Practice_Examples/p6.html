@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap Year</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+
+        .main {}
+    </style>
+    <!-- Take a year and check whether it is leap year or not -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <form action="" name="leapyear">
+                <h1>Leap Year</h1>
+                <label for="y1">Enter Year : </label>
+                <input type="number" name="year" placeholder="Enter Year">
+                <br>
+                <br>
+                <button type="button" onclick="check()" class="btn">Check Year</button>
+                <p id="answer"></p>
+            </form>
+        </div>
+        <!-- <div class="btn">
+        </div> -->
+    </div>
+    <script>
+        var y;
+        // function gets(){
+        // y = parseInt(document.getElementById("y1").value);
+        // alert("Hello");
+        // console.log(y);
+        // }
+        function check() {
+            y = parseInt(leapyear.year.value);
+            if (y % 4 == 0) {
+                // alert(y1 + " : is a leap year");
+                document.getElementById("answer").innerHTML = y + " : is a Leap Year";
+            }
+            else {
+                // alert(y + " : is not a leap year");
+                document.getElementById("answer").innerHTML = y + " : is not a Leap Year";
+            }
+        }
+    </script>
+</body>
+
+</html>

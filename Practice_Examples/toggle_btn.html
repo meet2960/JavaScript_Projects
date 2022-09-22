@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn" onclick="check()">Click to Block </button>
+    <p id="para" class="hide">Script to Display Block and None Using Button OnClick Function</p>
+    <script>
+        let show = document.getElementById("para");
+        function check() {
+            if (show.style.display == "block") {
+                show.style.display = "none";
+            }
+            else {
+                show.style.display = "block";
+            }
+        }
+
+
+        /*let Variable*/
+        // let a = 10;
+        // console.log("Value of A is : " + a);
+        // // let a = 20;     // We cannot ReDeclare Let
+        // function check(){
+        //     let a = 30;
+        //     console.log("Value of A Inside Function : " + a);
+        //     function checks(){
+        //         let a = 50;
+        //         console.log("Value of A Inside Nested Function is " + a);
+        //     }
+        //     console.log("Still inside the first function : " + a);
+        //     checks();
+        // }
+        // check();
+        // console.log("Value of A Outside Function : " + a);
+
+
+        /*Var Variable*/
+        // var a = 10;
+        // console.log("Value of A is : " + a);
+        // // let a = 20;     // We cannot ReDeclare Let
+        // function check(){
+        //     var a = 30;
+        //     console.log("Value of A Inside Function : " + a);
+        //     function checks(){
+        //         var a = 50;
+        //         console.log("Value of A Inside Nested Function is " + a);
+        //     }
+        //     console.log("Still inside the first function : " + a);
+        //     checks();
+        // }
+        // check();
+        // console.log("Value of A Outside Function : " + a);
+
+        // let names = "Hello"
+
+    </script>
+</body>
+
+</html>
