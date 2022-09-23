@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container main">
+        <div class="content">
+            <div class="row pb-3 bor">
+                <div class="col heading">
+                    DIGITAL CLOCK
+                </div>
+            </div>
+            <div class="row py-4 text-center">
+                <div class="col-lg-3 ccol">
+                    <div id="h" class="cbox"></div>
+                </div>
+                <div class="col-lg-3 ccol">
+                    <div id="m" class="cbox"></div>
+                </div>
+                <div class="col-lg-3 ccol">
+                    <div id="s" class="cbox"></div>
+                </div>
+                <div class="col-lg-3 ccol">
+                    <div id="f" class="cbox"></div>
+                </div>
+            </div>
+            <div class="row pt-4 justify-content-evenly text-center">
+                <div class="col-lg-2">
+                    <div id="date" class="dbox"></div>
+                </div>
+                <div class="col-lg-4 px-0">
+                    <div id="month" class="dbox"></div>
+                </div>
+                <div class="col-lg-2 px-0">
+                    <div id="year" class="dbox"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
