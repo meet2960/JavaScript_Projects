@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* outline: 2px solid red; */
+    /* color: white; */
+}
+
+.emsg {
+    color: red;
+    display: block;
+}
+
+.backgroundimg {
+    background: url('background_img.jpg') no-repeat center;
+    background-size: cover;
+    padding: 50px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.mainform {
+    background-color: #f2f6f7;
+    border-radius: 20px;
+    padding: 33.5px 40px;
+
+}
+
+h1 {
+    font-size: 40px;
+    /* padding:; */
+}
+
+.heading {
+    position: relative;
+}
+
+h1::before {
+    content: '.';
+    position: absolute;
+    top: -10px;
+    left: 0;
+}
+
+h1::after {
+    content: '.';
+    position: absolute;
+    top: -10px;
+    right: 0;
+}
+
+.inputs {
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid purple;
+    padding: 12px 0;
+    background-color: transparent;
+    /* background-color: #f2f6f7; */
+}
+
+input:focus-visible {
+    outline: 0px;
+}
+select,
+input::placeholder {
+    color: black;
+}
+select:focus-visible {
+    outline: 0px;
+}
+
+.mybtn {
+    background-color: rgb(112 58 131);
+    padding: 12px 50px;
+    border-radius: 40px;
+    color: white;
+    border: none;
+    transition: 0.3s all ease-out;
+
+}
+
+.mybtn:hover {
+    background-color: rgb(153, 52, 189);
+    transition: 0.3s all ease-in;
+}
+
+/* @media screen and (max-width: 376px) {
+    .backgroundimg {
+        display: block;
+    }
+} */
