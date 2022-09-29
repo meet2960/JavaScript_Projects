@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* outline: 3px solid red; */
+}
+
+.wrapper {}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.img-side {
+    background: url('side_img.jpg') no-repeat center;
+    background-size: cover;
+    width: 100%;
+}
+
+.mainrow {
+    /* border: 2px solid black; */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 16px 32px 0 rgba(7, 28, 31, 0.3);
+}
+
+/*Form CSS*/
+.mainform {
+    background-color: #f2f6f7;
+    /* border-radius: 20px; */
+    padding: 40px;
+}
+
+.inputs {
+    width: 100%;
+    border: none;
+    padding: 12px 0;
+    border-bottom: 3px solid #26668e;
+    background-color: transparent;
+}
+
+.emsg {
+    color: red;
+    display: block;
+}
+
+input:focus-visible {
+    outline: 0px;
+}
+
+select,
+input::placeholder {
+    color: black;
+}
+
+select:focus-visible {
+    outline: 0px;
+}
+
+.mybtn {
+    background-color: #26668e;
+    padding: 12px 50px;
+    border-radius: 40px;
+    color: white;
+    border: none;
+    transition: 0.3s all ease-in;
+}
+
+.mybtn:hover {
+    background-color: #3c8aa0;
+    transition: 0.3s all ease-out;
+}
